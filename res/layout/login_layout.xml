@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/edu.ecjtu.musicplayer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <!-- 类标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_bg"
+        style="@style/titleStyle" >
+
+        <LinearLayout
+            android:id="@+id/rl_login_back"
+            style="@style/backStyle" >
+
+            <edu.ecjtu.domain.views.MyBracketView
+                android:id="@+id/mbracketview"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:bracketHeight="20dp"
+                app:bracketWidth="18dp"
+                app:lineColor="#ffffffff"
+                app:startX="0dp"
+                app:startY="26dp" />
+
+            <TextView
+                style="@style/titleNameStyle"
+                android:text="登录非常音乐" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_login_username_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_bg"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="20dp"
+        android:textColor="#ffff0000" />
+
+    <RelativeLayout
+        android:id="@+id/rl_login_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_login_username_error"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <ImageView
+            android:id="@+id/iv_login_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/login_username_icon" />
+
+        <EditText
+            android:id="@+id/et_login_username"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/iv_login_username"
+            android:background="@null"
+            android:hint="请输入用户名"
+            android:singleLine="true"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/et_login_username"
+            android:layout_marginTop="10dp"
+            android:background="#aaa" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_login_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_login_username"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <ImageView
+            android:id="@+id/iv_login_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/login_password_icon" />
+
+        <EditText
+            android:id="@+id/et_login_password"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/iv_login_password"
+            android:background="@null"
+            android:hint="请输入密码"
+            android:maxLength="10"
+            android:password="true"
+            android:singleLine="true"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/et_login_password"
+            android:layout_marginTop="10dp"
+            android:background="#aaa" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/rl_login_password"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/login_button_pressed_color"
+        android:text="登录"
+        android:textColor="#999"
+        android:textSize="19dp" />
+
+</RelativeLayout>

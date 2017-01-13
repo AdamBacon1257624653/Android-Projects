@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/edu.ecjtu.musicplayer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <!-- 类标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_local_bg"
+        style="@style/titleStyle" >
+
+        <!-- 返回布局 -->
+
+        <LinearLayout
+            android:id="@+id/rl_favorite_back"
+            style="@style/backStyle" >
+
+            <edu.ecjtu.domain.views.MyBracketView
+                android:id="@+id/bv_local"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:bracketHeight="20dp"
+                app:bracketWidth="18dp"
+                app:lineColor="#ffffffff"
+                app:startX="0dp"
+                app:startY="26dp" />
+
+            <TextView
+                style="@style/titleNameStyle"
+                android:text="收藏歌单" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_favorite"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/favorite_cover" />
+
+    <ListView
+        android:id="@+id/lv_favorited_songs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_nofavoritesong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="30dp"
+        android:drawableTop="@drawable/no_favorite_icon"
+        android:gravity="center_horizontal"
+        android:text="暂无音乐收藏"
+        android:visibility="gone" />
+
+</LinearLayout>

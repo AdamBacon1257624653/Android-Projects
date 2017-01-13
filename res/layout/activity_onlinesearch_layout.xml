@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/musicdb_bg" >
+
+    <!-- 搜索栏布局 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_onlinesearch"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#5000B8FF"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:src="@drawable/bracket_icon" />
+
+        <Button
+            android:id="@+id/btn_onlinesearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:text="取消"
+            android:textColor="#FF606060"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toLeftOf="@id/btn_onlinesearch"
+            android:layout_toRightOf="@id/iv_back"
+            android:background="@drawable/online_search_et" >
+
+            <ImageView
+                android:id="@+id/iv_onlinesearch"
+                style="@style/search_iv_style"
+                android:paddingLeft="10dp" />
+
+            <LinearLayout
+                android:id="@+id/ll_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_toRightOf="@id/iv_onlinesearch"
+                android:background="@null"
+                android:orientation="horizontal" >
+
+                <RelativeLayout style="@style/rl_etstyle" >
+
+                    <EditText
+                        android:id="@+id/et_onlinesearch_songname"
+                        style="@style/et_onlinesearch_style"
+                        android:hint="歌曲" />
+
+                    <ImageView
+                        android:id="@+id/iv_clearsearch_songname"
+                        style="@style/iv_clear_style"
+                        android:layout_alignRight="@id/et_onlinesearch_songname"
+                        android:src="@drawable/onlinesearch_clear" />
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/rl_etstyle" >
+
+                    <EditText
+                        android:id="@+id/et_onlinesearch_singername"
+                        style="@style/et_onlinesearch_style"
+                        android:hint="歌手" />
+
+                    <ImageView
+                        android:id="@+id/iv_clearsearch_singername"
+                        style="@style/iv_clear_style"
+                        android:layout_alignRight="@id/et_onlinesearch_singername"
+                        android:src="@drawable/onlinesearch_clear" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_searchresult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_onlinesearch"
+        android:background="#5000b4ff"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="gone" >
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/rl_topserach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lv_searchresult"
+        android:layout_marginTop="25dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <TextView
+            android:id="@+id/tv_topsearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="热门搜索" />
+
+        <LinearLayout
+            android:id="@+id/ll_first"
+            style="@style/ll_topsearch_style"
+            android:layout_below="@id/tv_topsearch" >
+
+            <TextView
+                style="@style/tv_first_topsearch_style"
+                android:layout_weight="3"
+                android:text="隔壁老王家推歌" />
+
+            <TextView
+                style="@style/tv_nonfirst_topsearch_style"
+                android:layout_weight="2"
+                android:text="春夏秋冬" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_second"
+            style="@style/ll_topsearch_style"
+            android:layout_below="@id/ll_first" >
+
+            <TextView
+                style="@style/tv_first_topsearch_style"
+                android:layout_weight="3"
+                android:text="我是歌手第四季" />
+
+            <TextView
+                style="@style/tv_nonfirst_topsearch_style"
+                android:layout_weight="2"
+                android:text="小美推歌" />
+
+            <TextView
+                style="@style/tv_nonfirst_topsearch_style"
+                android:layout_weight="1"
+                android:text="张国荣" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_third"
+            style="@style/ll_topsearch_style"
+            android:layout_below="@id/ll_second" >
+
+            <TextView
+                style="@style/tv_first_topsearch_style"
+                android:layout_weight="1"
+                android:text="女人花" />
+
+            <TextView
+                style="@style/tv_nonfirst_topsearch_style"
+                android:layout_weight="3"
+                android:text="太阳的后裔原声音乐" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_fourth"
+            style="@style/ll_topsearch_style"
+            android:layout_below="@id/ll_third" >
+
+            <TextView
+                style="@style/tv_first_topsearch_style"
+                android:layout_weight="2.5"
+                android:text="少年共和国" />
+
+            <TextView
+                style="@style/tv_nonfirst_topsearch_style"
+                android:layout_weight="2"
+                android:text="邓紫棋" />
+
+            <TextView
+                style="@style/tv_nonfirst_topsearch_style"
+                android:layout_weight="1"
+                android:text="aoa" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_searchhistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_fourth"
+            android:layout_marginTop="10dp"
+            android:text="搜索历史" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v_devide"
+        style="@style/v_devide_style"
+        android:layout_below="@id/rl_topserach"
+        android:layout_marginTop="5dp" />
+
+    <include
+        android:id="@+id/include_botttom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/bottom_music_play" />
+
+    <ListView
+        android:id="@+id/lv_searchhistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/include_botttom"
+        android:layout_below="@id/v_devide"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" />
+
+    <ImageView
+        android:id="@+id/iv_musicicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/music_icon"
+        android:visibility="gone" />
+
+</RelativeLayout>

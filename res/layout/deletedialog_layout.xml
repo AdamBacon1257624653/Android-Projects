@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_deletedialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="删除确认"
+        android:textColor="#ff000000" />
+
+    <View
+        android:id="@+id/v_title_msg_division"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tv_deletedialog_title"
+        android:background="#eee" />
+
+    <LinearLayout
+        android:id="@+id/ll_deletedialog_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/v_title_msg_division"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="确定要删除"
+            android:textColor="#444"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_deletedialog_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:text="'同桌的你'"
+            android:textColor="#444"
+            android:gravity="center_horizontal"
+            android:ellipsize="end"
+            android:maxWidth="100dp"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_dialog_message_sufix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="吗?"
+            android:textColor="#444"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/cb_deletedialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_deletedialog_message"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="同时删除本地文件"
+        android:textColor="#aaa" />
+
+    <View
+        android:id="@+id/v_deletedialog_division"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/cb_deletedialog"
+        android:background="#ddd" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/v_deletedialog_division"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:gravity="center_horizontal"
+            android:text="取消"
+            android:textColor="#666"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#ddd" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:gravity="center_horizontal"
+            android:text="确定"
+            android:textColor="#666"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</RelativeLayout>

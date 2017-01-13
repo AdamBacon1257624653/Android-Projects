@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <ImageView
+        style="@style/musicdb_item_iv_style"
+        android:src="@drawable/musicdb_stickinear" />
+
+    <LinearLayout style="@style/ll_musicdb_item_style" >
+
+        <TextView
+            style="@style/tv_musicdb_title_style"
+            android:text="塞在耳朵里的低音炮" />
+
+        <TextView
+            style="@style/tv_musicdb_description_style"
+            android:text="非常无线耳机,动感低音,畅快淋漓" />
+    </LinearLayout>
+
+</LinearLayout>

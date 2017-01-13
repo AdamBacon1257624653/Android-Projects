@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/iv_musicdb_lv"
+        style="@style/musicdb_item_iv_style"
+        android:src="@drawable/musicdb_newest_songs" />
+
+    <LinearLayout style="@style/ll_musicdb_item_style" >
+
+        <TextView
+            android:id="@+id/tv_musicdb_titlea"
+            style="@style/tv_musicdb_title_style"
+            android:text="4月26日最新单曲" />
+
+        <TextView
+            style="@style/tv_musicdb_description_style"
+            android:text="让这首歌曲唤醒你沉睡心底的喜悦！" />
+    </LinearLayout>
+
+</LinearLayout>

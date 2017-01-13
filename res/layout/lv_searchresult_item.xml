@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_url_songname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pressed_color"
+        android:ellipsize="end"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:singleLine="true"
+        android:text="好久不见"
+        android:textColor="#ff000000"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/v_searchresult_devide"
+        style="@style/v_devide_style" />
+
+    <TextView
+        android:id="@+id/tv_hqurl_songname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pressed_color"
+        android:ellipsize="end"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:singleLine="true"
+        android:text="好久不见   (高品质)"
+        android:textColor="#ff000000"
+        android:textSize="16sp" />
+
+</LinearLayout>

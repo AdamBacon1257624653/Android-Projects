@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/edu.ecjtu.musicplayer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 类标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_local_bg"
+        style="@style/titleStyle" >
+
+        <!-- 返回布局 -->
+
+        <LinearLayout
+            android:id="@+id/rl_download_back"
+            style="@style/backStyle" >
+
+            <edu.ecjtu.domain.views.MyBracketView
+                android:id="@+id/bv_local"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:bracketHeight="20dp"
+                app:bracketWidth="18dp"
+                app:lineColor="#FFFFFFFF"
+                app:startX="0dp"
+                app:startY="26dp" />
+
+            <TextView
+                style="@style/titleNameStyle"
+                android:text="下载管理" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_download_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <LinearLayout
+            android:id="@+id/ll_downloaded_tab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/tv_downloaded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已下载(0)"
+                android:textColor="#FF0084FF"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_downloading_tab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/tv_downloading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正在下载(0)"
+                android:textColor="#FF000000"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <edu.ecjtu.domain.views.MyStickView
+            android:id="@+id/iv_download_move"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignBottom="@id/iv_download_move"
+            android:background="@android:color/darker_gray" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager_download"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/edu.ecjtu.musicplayer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ddd"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_bg"
+        style="@style/titleStyle" >
+
+        <LinearLayout
+            android:id="@+id/rl_back"
+            style="@style/backStyle" >
+
+            <edu.ecjtu.domain.views.MyBracketView
+                android:id="@+id/mbracketview"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:bracketHeight="20dp"
+                app:bracketWidth="18dp"
+                app:lineColor="#ffffffff"
+                app:startX="0dp"
+                app:startY="26dp" />
+
+            <TextView
+                style="@style/titleNameStyle"
+                android:text="更换背景" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="450dp" >
+
+        <ImageView
+            android:id="@+id/iv_preshow"
+            android:layout_width="230dp"
+            android:layout_height="400dp"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/zly" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#cc080808" >
+
+        <Gallery
+            android:id="@+id/gallery_my"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_centerVertical="true"
+            android:spacing="14dp" >
+        </Gallery>
+    </RelativeLayout>
+
+</LinearLayout>

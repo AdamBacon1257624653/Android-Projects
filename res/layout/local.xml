@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/edu.ecjtu.musicplayer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff" >
+
+    <!-- 类标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_local_bg"
+        style="@style/titleStyle" >
+
+        <!-- 一般类标题栏显示布局 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_local_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent" >
+
+            <!-- 返回布局 -->
+
+            <LinearLayout
+                android:id="@+id/rl_local_back"
+                style="@style/backStyle" >
+
+                <edu.ecjtu.domain.views.MyBracketView
+                    android:id="@+id/bv_local"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    app:bracketHeight="20dp"
+                    app:bracketWidth="18dp"
+                    app:lineColor="#ffffffff"
+                    app:startX="0dp"
+                    app:startY="26dp" />
+
+                <TextView
+                    style="@style/titleNameStyle"
+                    android:text="本地音乐" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_scanlocal"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/searchlocal" />
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="50dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/local_search" />
+        </RelativeLayout>
+
+        <!-- 类标题栏开始搜索布局 -->
+
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:hint="请输入关键字,快速搜索"
+                android:singleLine="true"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_cancelsearch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="取消"
+                android:textColor="#ffffffff"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 页面切换的顶部布局 -->
+
+    <LinearLayout
+        android:id="@+id/ll_top_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_local_bg"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/tv_local_song"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="歌曲"
+            android:textColor="#FF3481D3" />
+
+        <TextView
+            android:id="@+id/tv_local_folder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="文件夹"
+            android:textColor="#ff000000" />
+
+        <TextView
+            android:id="@+id/tv_local_artist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="歌手"
+            android:textColor="#ff000000" />
+
+        <TextView
+            android:id="@+id/tv_local_album"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="专辑"
+            android:textColor="#ff000000" />
+    </LinearLayout>
+
+    <edu.ecjtu.domain.views.MyStickView
+        android:id="@+id/iv_local_move"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/ll_top_tab"
+        android:scaleType="fitXY" />
+
+    <View
+        android:id="@+id/v_devide_local"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/iv_local_move"
+        android:background="#ccc" />
+
+    <include
+        android:id="@+id/include_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/bottom_music_play" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_local"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@id/include_layout"
+        android:layout_below="@id/v_devide_local" />
+
+</RelativeLayout>

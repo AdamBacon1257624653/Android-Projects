@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- <style name="AppBaseTheme" parent="Theme.AppCompat.Light"></style> -->
+
+
+    <!--
+         Application theme. 
+    	 All customizations that are NOT specific to a particular API-level can go here.
+    -->
+    <!-- <style name="AppTheme" parent="AppBaseTheme"></style> -->
+
+    <style name="linearStyle">
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:onClick">layoutClick</item>
+    </style>
+
+    <style name="StatusBarBackground">
+        <item name="android:background">#04AEDA</item>
+    </style>
+
+    <style name="MyTheme" parent="android:Theme">
+        <item name="android:windowTitleSize">55dp</item>
+        <!-- <item name="android:windowTitleStyle">@style/XWindowTitle</item> -->
+        <item name="android:windowTitleBackgroundStyle">@style/StatusBarBackground</item>
+        <!-- <item name="android:windowContentOverlay">@null</item> -->
+    </style>
+
+    <!-- 定义Acitivty的动画 -->
+    <style name="ActivityAnimShow" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/music_activity_open</item>
+        <item name="android:windowExitAnimation">@anim/music_activity_close</item>
+    </style>
+
+    <!-- 定义Acitivty的出现模式 -->
+    <style name="MyAnimTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowAnimationStyle">@style/ActivityAnimShow</item>
+        <!-- <item name="android:windowFrame">@null</item> 无边框 -->
+        <!-- <item name="android:windowIsFloating">true</item>悬浮 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 所在背景模糊 -->
+    </style>
+
+    <!-- 定義dialog的style -->
+    <style name="dialog_theme" parent="@android:style/Theme.Dialog">
+
+        <!-- <item name="android:windowFrame">@null</item> -->
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <!-- 定义iv_operation的样式 -->
+    <style name="operation_iv_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_gravity">right</item>
+        <item name="android:background">@drawable/list_item_pressed_color</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:paddingRight">25dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:src">@drawable/song_operation_options</item>
+    </style>
+
+    <!-- 字母textview的样式 -->
+    <style name="letter_tv_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:text">A</item>
+        <item name="android:textColor">#FF00B4FF</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- 设置底部的样式（歌曲、文件、歌手....） -->
+    <style name="tv_count_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:textColor">#aaa</item>
+    </style>
+    <!-- 设置分割线的样式 -->
+    <style name="v_devide_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#aaa</item>
+    </style>
+    <!-- 设置letterview的样式 -->
+    <style name="letterview_style">
+        <item name="android:layout_width">25dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+    <!-- 设置显示字母的气泡样式 -->
+    <style name="tv_showletter_style">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:background">@drawable/letter_show_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:text">A</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:visibility">gone</item>
+    </style>
+    <!-- 设置播放界面的播放各按钮布局 -->
+    <style name="iv_play_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/music_play_pressedcolor</item>
+    </style>
+
+    <style name="iv_opt_style" parent="@style/iv_play_style">
+        <item name="android:layout_height">20dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+    </style>
+    <!-- 设置类标题栏的样式 -->
+    <style name="titleStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:background">#04AEDA</item>
+    </style>
+    <!-- 返回栏的样式 -->
+    <style name="backStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingLeft">20dp</item>
+    </style>
+    <!-- 设置标题名字样式 -->
+    <style name="titleNameStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">#FFFFFFFF</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- musicitemimageview -->
+    <style name="musicdb_item_iv_style">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+    <!-- item的总线型布局 -->
+    <style name="ll_musicdb_item_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <!-- item中的title textview的样式 -->
+    <style name="tv_musicdb_title_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#FF000000</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <!-- item中description的textview的样式 -->
+    <style name="tv_musicdb_description_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#FF808080</item>
+    </style>
+    <!-- search 图片布局样式 -->
+    <style name="search_iv_style">
+        <item name="android:layout_width">25dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:padding">3dp</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:src">@drawable/local_search</item>
+    </style>
+    <!-- search edittext的布局 -->
+    <style name="et_search_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:hint">歌曲/歌手/歌词/专辑</item>
+        <item name="android:textColor">#FFFFFFFF</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <!-- 热门搜索的textview的布局 -->
+    <style name="tv_first_topsearch_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/online_search_et</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+    <!-- 热门搜索中非第一个textview的布局 -->
+    <style name="tv_nonfirst_topsearch_style" parent="@style/tv_first_topsearch_style">
+        <item name="android:layout_marginLeft">10dp</item>
+    </style>
+    <!-- 热门搜索线型布局的style -->
+    <style name="ll_topsearch_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <!-- 搜索edittext的relative布局 -->
+    <style name="rl_etstyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@null</item>
+    </style>
+    <!-- 在线 搜索输入框样式 -->
+    <style name="et_onlinesearch_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@null</item>
+        <item name="android:textColor">#FF000000</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <!-- 清空内容的imageview布局样式 -->
+    <style name="iv_clear_style">
+        <item name="android:layout_width">18dp</item>
+        <item name="android:layout_height">18dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+</resources>

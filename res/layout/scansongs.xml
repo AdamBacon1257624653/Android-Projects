@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/edu.ecjtu.musicplayer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/scan_bg"
+    android:orientation="vertical" >
+
+    <!-- 一般类标题栏显示布局 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_scan_bg"
+        style="@style/titleStyle" >
+
+        <!-- 返回布局 -->
+
+        <LinearLayout
+            android:id="@+id/rl_scan_back"
+            style="@style/backStyle" >
+
+            <edu.ecjtu.domain.views.MyBracketView
+                android:id="@+id/bv_sacn"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:bracketHeight="20dp"
+                app:bracketWidth="18dp"
+                app:lineColor="#ffffffff"
+                app:startX="0dp"
+                app:startY="26dp" />
+
+            <TextView
+                style="@style/titleNameStyle"
+                android:text="扫描歌曲" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_scanall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="160dp"
+        android:background="@drawable/btn_scanall_bg"
+        android:padding="10dp"
+        android:text="一键全盘扫描" />
+
+    <Button
+        android:id="@+id/btn_choosefile_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/btn_choosefilescan_bg"
+        android:padding="10dp"
+        android:text="选择文件扫描" />
+
+</RelativeLayout>

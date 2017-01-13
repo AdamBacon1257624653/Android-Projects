@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff" >
+
+    <RelativeLayout
+        android:id="@+id/rl_local_artists"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/lv_local_artists"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ListView>
+
+        <edu.ecjtu.domain.views.LetterView
+            android:id="@+id/singer_letterview"
+            style="@style/letterview_style" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_noartist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/iv_artist_oops"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/scan_nosongs" />
+
+        <ImageView
+            android:id="@+id/iv_artist_pointup"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/pointup" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_artist_oops"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="opps，手机中没有音乐，点击箭头所指图标扫描一下音乐吧..."
+            android:textColor="#ff000000" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_singer_show_letter"
+        style="@style/tv_showletter_style" />
+
+</RelativeLayout>

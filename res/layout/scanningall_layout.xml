@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/edu.ecjtu.musicplayer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rl_scan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_scaninfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已扫描出0首歌曲" />
+
+            <TextView
+                android:id="@+id/tv_scanfilename"
+                android:layout_width="250dp"
+                android:singleLine="true"
+                android:layout_height="wrap_content"
+                android:text="为您过滤38个音乐片段"
+                android:textColor="#888"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/scanningcancel_btn_bg"
+            android:text="取消" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_scanning_bg"
+        android:layout_width="match_parent"
+        android:layout_height="505dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/scanning_bg" />
+
+    <edu.ecjtu.domain.views.MyProgressBar
+        android:id="@+id/myprogressbar"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_above="@id/rl_scan"
+        android:layout_below="@id/iv_scanning_bg"
+         />
+
+</RelativeLayout>

@@ -1,0 +1,130 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/musicdb_bg"
+        tools:context="edu.ecjtu.activities.MainActivity$PlaceholderFragment" >
+
+        <!-- 搜索框布局 -->
+
+        <LinearLayout
+            android:id="@+id/ll_online_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/online_search_et" >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:padding="3dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/online_audio_search_icon" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="40dp"
+                android:padding="3dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/local_search" />
+
+            <EditText
+                android:id="@+id/et_onlinesearch_db"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:background="@null"
+                android:hint="歌曲/歌手/歌词/专辑"
+                android:textColor="#FFFFFFFF"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- 图像轮播布局 -->
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_image"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/ll_online_search" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@id/vp_image"
+            android:background="#77000000"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_intro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/transparent"
+                android:ellipsize="end"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:text="放假咯加分对抗肌肤fdaj"
+                android:textColor="#ffffff" />
+
+            <LinearLayout
+                android:id="@+id/ll_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/gv_musicdb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vp_image"
+            android:layout_marginBottom="15dp"
+            android:background="@null"
+            android:horizontalSpacing="5dp"
+            android:numColumns="3"
+            android:verticalSpacing="5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/gv_musicdb"
+            android:background="#5000B4FF"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="今日精华"
+                android:textColor="#FF000000"
+                android:textSize="18sp" />
+
+            <include layout="@layout/musicdb_lv_item_layout" />
+
+            <View style="@style/v_devide_style" />
+
+            <include layout="@layout/musicdb_lv_item_layoutb" />
+
+            <View style="@style/v_devide_style" />
+
+            <include layout="@layout/musicdb_lv_item_layoutc" />
+
+            <View style="@style/v_devide_style" />
+
+            <include layout="@layout/musicdb_lv_item_layoutd" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

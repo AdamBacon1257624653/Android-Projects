@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edu.ecjtu.domain.viewgroups.DragLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menu_bg" >
+
+    <include layout="@layout/player_menu_layout" />
+
+    <edu.ecjtu.domain.viewgroups.MyLinearLayout
+        android:id="@+id/mll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <include layout="@layout/player_main_layout" />
+    </edu.ecjtu.domain.viewgroups.MyLinearLayout>
+
+</edu.ecjtu.domain.viewgroups.DragLayout>

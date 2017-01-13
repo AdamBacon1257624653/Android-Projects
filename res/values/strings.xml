@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">非常音乐</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="my_strarrs">
+        <item>本地音乐</item>
+        <item>最近播放</item>
+        <item>下载管理</item>
+    </string-array>
+    <string-array name="my_images">
+        <item>@drawable/localmusic</item>
+        <item>@drawable/recentplay</item>
+        <item>@drawable/downloadmanagement</item>
+    </string-array>
+
+    <!-- 画廊的照片名和照片资源ID -->
+    <string-array name="cover_names">
+        <item>从相册中选择</item>
+        <item>非常音乐</item>
+        <item>张靓颖</item>
+        <item>陈奕迅</item>
+        <item>刘德华</item>
+        <item>许嵩</item>
+        <item>鹿</item>
+        <item>花</item>
+        <item>风景</item>
+    </string-array>
+    <string-array name="cover_images">
+        <item>@drawable/camera</item>
+        <item>@drawable/mydefault</item>
+        <item>@drawable/zly</item>
+        <item>@drawable/cyx</item>
+        <item>@drawable/ldh</item>
+        <item>@drawable/xs</item>
+        <item>@drawable/deer</item>
+        <item>@drawable/flower</item>
+        <item>@drawable/sightview</item>
+    </string-array>
+</resources>

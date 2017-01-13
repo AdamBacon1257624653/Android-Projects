@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/edu.ecjtu.musicplayer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <!-- 类标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_custom_scan_bg"
+        style="@style/titleStyle" >
+
+        <!-- 返回布局 -->
+
+        <LinearLayout
+            android:id="@+id/rl_custom_scan_back"
+            style="@style/backStyle" >
+
+            <edu.ecjtu.domain.views.MyBracketView
+                android:id="@+id/bv_local"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:bracketHeight="20dp"
+                app:bracketWidth="18dp"
+                app:lineColor="#ffffffff"
+                app:startX="0dp"
+                app:startY="26dp" />
+
+            <TextView
+                style="@style/titleNameStyle"
+                android:text="自定义扫描" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 文件父目录 -->
+
+    <LinearLayout
+        android:id="@+id/ll_parentpath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_custom_scan_bg"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:text="/"
+            android:textColor="#ff333333"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/file_separator" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="storage"
+            android:textColor="#ff333333"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/file_separator" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="sdcard0"
+            android:textColor="#ff333333"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/file_separator" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/ll_parentpath"
+        android:background="#eee" />
+
+    <!-- 文件的回退布局 -->
+
+    <LinearLayout
+        android:id="@+id/rl_upback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/v_separator"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/tv_upback"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_weight="10"
+            android:drawableLeft="@drawable/file_upback"
+            android:drawablePadding="5dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="向上"
+            android:textColor="#ff333333"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_allcheck"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="10dp" >
+
+            <TextView
+                android:id="@+id/tv_allcheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全选"
+                android:textColor="#ff333333"
+                android:textSize="14sp" />
+
+            <edu.ecjtu.domain.views.MyCheckView
+                android:id="@+id/iv_allcheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/file_circlecheck" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v_separatorb"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rl_upback"
+        android:background="#eee" />
+
+    <ListView
+        android:id="@+id/lv_files"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/v_separatorb" />
+
+    <!-- 扫描按钮布局 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffffff"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <View
+            android:id="@+id/v_separatorc"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp"
+            android:background="#ccc" />
+
+        <Button
+            android:id="@+id/btn_startscan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/v_separatorc"
+            android:layout_centerInParent="true"
+            android:background="@drawable/start_scan_bg"
+            android:text="开始扫描"
+            android:textColor="#aaa" />
+    </RelativeLayout>
+
+</RelativeLayout>

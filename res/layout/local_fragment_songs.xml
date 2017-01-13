@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff" >
+
+    <LinearLayout
+        android:id="@+id/ll_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDuration="100" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在拼命加载音乐..."
+            android:textColor="#777" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_hassongs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/btn_playmethod"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:background="#ddd"
+            android:gravity="left"
+            android:padding="5dp"
+            android:text="顺序播放"
+            android:textColor="#333"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/iv_dropdown"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignRight="@id/btn_playmethod"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/dropdown" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_local_songs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_hassongs"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ListView
+            android:id="@+id/lv_local_songs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <edu.ecjtu.domain.views.LetterView
+            android:id="@+id/song_letterview"
+            style="@style/letterview_style" />
+
+        <ImageView
+            android:id="@+id/iv_musicicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/music_icon"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_nosong"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/iv_oops"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/scan_nosongs" />
+
+        <ImageView
+            android:id="@+id/iv_pointup"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/pointup" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_oops"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="opps，手机中没有音乐，点击箭头所指图标扫描一下音乐吧..."
+            android:textColor="#ff000000" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_show_letter"
+        style="@style/tv_showletter_style"
+        android:layout_marginTop="25dp" />
+
+</RelativeLayout>

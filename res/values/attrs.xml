@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MyBracketView">
+        <attr name="startX" format="dimension"></attr>
+        <attr name="startY" format="dimension"></attr>
+        <attr name="bracketWidth" format="dimension"></attr>
+        <attr name="bracketHeight" format="dimension"></attr>
+        <attr name="lineColor" format="color"></attr>
+    </declare-styleable>
+    <declare-styleable name="MyProgressBar">
+        <attr name="maxProgress" format="integer"></attr>
+        <attr name="currProgress" format="integer"></attr>
+    </declare-styleable>
+    <color name="darker_gray">#11110420</color>
+    <color name="white">#ffffffff</color>
+</resources>
